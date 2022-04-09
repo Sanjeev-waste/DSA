@@ -1,0 +1,12 @@
+//find the factorial of any number n.
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int A=1;
+    for(int i=1;i<=n;i++){
+        A*=i;
+    }
+    cout<<A;
+}
