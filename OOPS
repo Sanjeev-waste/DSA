@@ -1,0 +1,199 @@
+// concept 1
+#include<iostream>
+using namespace std;
+
+class human{
+    public:
+    int height;
+    int weight;
+    int age;
+    
+    public:
+    int getage(){
+        return this->age;
+    }
+    int setweight(int w){
+        return this->weight = w;
+    }
+    
+};
+
+class male: public human{
+    public:
+    string color;
+    public:
+    
+    void sleep(){
+        cout<<"male sleeping"<<endl;
+    }
+    // male(){
+    //     cout<<"contructor called";
+    // }
+    
+    
+};
+
+
+int main(){
+    male O1;
+    cout<<O1.age<<endl;
+    cout<<O1.height<<endl;
+    cout<<O1.weight<<endl;
+    cout<<O1.color<<endl;
+    
+    O1.setweight(84);
+    cout<<O1.weight<<endl;
+    
+    
+    
+    
+}
+
+
+//concept 2
+
+#include<iostream>
+using namespace std;
+
+class animal{
+    public:
+    int age;
+    int weight;
+    
+    public:
+    void speak(){
+        cout<<"Speaking "<<endl;
+    }
+    
+};
+
+class dog: public animal{
+    
+    
+};
+
+class pug: public dog{
+    
+};
+
+
+int main(){
+    pug d;
+    d.speak();
+}
+
+//concept 3
+#include<iostream>
+using namespace std;
+class animal{
+    public:
+    int age;
+    int weight;
+    public:
+    void bark(){
+        cout<<"bark"<<endl;
+    }
+};
+
+class human{
+    public:
+    void speak(){
+        cout<<"speaking"<<endl;
+    }
+    
+};
+
+class mix: public human, public animal{
+    
+    
+}; 
+
+int main(){
+   mix s;
+   s.speak();
+   s.bark();
+}
+
+
+concept 4
+#include<iostream>
+using namespace std;
+
+class a{
+  public:
+  void fun1(){
+      cout<<"I am in class First"<<endl;
+  }
+};
+class b: public a{
+  public:
+  void fun2(){
+      cout<<"I am in class B"<<endl;
+  }
+  
+};
+class c: public a{
+    public:
+    void fun3(){
+        cout<<"I am in class C"<<endl;
+    }
+};
+
+
+int main(){
+    c as;
+    as.fun1();
+    b ass;
+    ass.fun1();
+}
+
+concept 5
+#include<iostream>
+using namespace std;
+class a{
+    public:
+    void sad(){
+        cout<<"how are you?"<<endl;
+    }
+    
+};
+class b{
+    public:
+    void sad(){
+        cout<<"who are you?"<<endl;
+    }
+    
+};
+
+class c: public a, public b{
+    
+};
+
+
+int main(){
+    c a1;
+    a1.a:: sad();
+}
+
+
+concept 6
+#include<iostream>
+using namespace std;
+
+class a{
+  public:
+  void sad(){
+      cout<<"Hello"<<endl;
+  }
+  void sad(int a){
+      cout<<"hello "<<a<<endl;
+  }
+};
+
+
+
+int main(){
+    a s2;
+    s2.sad();
+    s2.sad(2);
+}
